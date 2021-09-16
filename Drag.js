@@ -953,9 +953,17 @@ d3.select("#img_B3").on("mouseout",function(){
 /*************************************/
 
 /*************************************/
+
 //Finishing click
 d3.select("#finish").on("click",function(){
+    
     if (confirm("Are you sure you wish to record your response?")) {
+        html2canvas(document.getElementById("overflow")).then(function(canvas){
+            let i = canvas.toDataURL("image/jpeg",0.9)
+            let temp_data_log = {'screen-capture':i};
+            $('body').trigger({ 'type': 'data_log_event', 'event_data': temp_data_log });
+    
+        }) 
         window.open("3_Finish.html","_blank" );
         img_ids = ['1','1F','2','2F','3','3F','4','4F','5','5F','6','6F','B1','B2','B3']
         for(i=0;i<15;i++){
@@ -963,7 +971,10 @@ d3.select("#finish").on("click",function(){
             left_img = d3.select("#img_" + img_ids[i]).style("left")
             time = Date.now()/1000
             let temp_data_log = {'event_type':'final-positions', 'img_id':('img_' + img_ids[i]), 'loc_top':top_img, 'loc_left':left_img, 'time':time};
-            $('body').trigger({ 'type': 'data_log_event', 'event_data': temp_data_log });}    
+            $('body').trigger({ 'type': 'data_log_event', 'event_data': temp_data_log });
+        
+            }
+                   
     
       } })
 

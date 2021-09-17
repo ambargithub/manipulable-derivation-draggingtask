@@ -3,6 +3,13 @@
 //Initial data
 
 $('document').ready(function(){
+    var person = prompt("Please enter your name","");
+    if (person != null & person != "") {
+
+        let temp_data_log = {'event_type':'participant-name', 'name':person};
+        $('body').trigger({ 'type': 'data_log_event', 'event_data': temp_data_log }); 
+    }
+    else{window.open("2_DraggableImages.html","_self" );}
 
     img_ids = ['1','1F','2','2F','3','3F','4','4F','5','5F','6','6F','B1','B2','B3']
     for(i=0;i<15;i++){
@@ -19,7 +26,7 @@ $('document').ready(function(){
 //Images Drag
 d3.select("#img_1").call(d3.drag()
     .on("start",function(event){
-                d3.select(this).style("border-width",2+"px")
+                d3.select(this).style("border-width",0+"px")
                 let i = event.x
                 let j = event.y
                 image_id = d3.select(this).property("id")
@@ -65,7 +72,7 @@ d3.select("#img_1").call(d3.drag()
 
 d3.select("#img_1F").call(d3.drag()
     .on("start",function(event){
-                d3.select(this).style("border-width",2+"px")
+                d3.select(this).style("border-width",0+"px")
                 let i = event.x
                 let j = event.y
                 image_id = d3.select(this).property("id")
@@ -111,7 +118,7 @@ d3.select("#img_1F").call(d3.drag()
 
 d3.select("#img_2").call(d3.drag()
     .on("start",function(event){
-                d3.select(this).style("border-width",2+"px")
+                d3.select(this).style("border-width",0+"px")
                 let i = event.x
                 let j = event.y
                 image_id = d3.select(this).property("id")
@@ -157,7 +164,7 @@ d3.select("#img_2").call(d3.drag()
 
 d3.select("#img_2F").call(d3.drag()
     .on("start",function(event){
-                d3.select(this).style("border-width",2+"px")
+                d3.select(this).style("border-width",0+"px")
                 let i = event.x
                 let j = event.y
                 image_id = d3.select(this).property("id")
@@ -203,7 +210,7 @@ d3.select("#img_2F").call(d3.drag()
 
 d3.select("#img_3").call(d3.drag()
     .on("start",function(event){
-                d3.select(this).style("border-width",2+"px")
+                d3.select(this).style("border-width",0+"px")
                 let i = event.x
                 let j = event.y
                 image_id = d3.select(this).property("id")
@@ -249,7 +256,7 @@ d3.select("#img_3").call(d3.drag()
 
 d3.select("#img_3F").call(d3.drag()
     .on("start",function(event){
-                d3.select(this).style("border-width",2+"px")
+                d3.select(this).style("border-width",0+"px")
                 let i = event.x
                 let j = event.y
                 image_id = d3.select(this).property("id")
@@ -295,7 +302,7 @@ d3.select("#img_3F").call(d3.drag()
 
 d3.select("#img_4").call(d3.drag()
     .on("start",function(event){
-                d3.select(this).style("border-width",2+"px")
+                d3.select(this).style("border-width",0+"px")
                 let i = event.x
                 let j = event.y
                 image_id = d3.select(this).property("id")
@@ -341,7 +348,7 @@ d3.select("#img_4").call(d3.drag()
 
 d3.select("#img_4F").call(d3.drag()
     .on("start",function(event){
-                d3.select(this).style("border-width",2+"px")
+                d3.select(this).style("border-width",0+"px")
                 let i = event.x
                 let j = event.y
                 image_id = d3.select(this).property("id")
@@ -387,7 +394,7 @@ d3.select("#img_4F").call(d3.drag()
 
 d3.select("#img_5").call(d3.drag()
     .on("start",function(event){
-                d3.select(this).style("border-width",2+"px")
+                d3.select(this).style("border-width",0+"px")
                 let i = event.x
                 let j = event.y
                 image_id = d3.select(this).property("id")
@@ -433,7 +440,7 @@ d3.select("#img_5").call(d3.drag()
 
 d3.select("#img_5F").call(d3.drag()
     .on("start",function(event){
-                d3.select(this).style("border-width",2+"px")
+                d3.select(this).style("border-width",0+"px")
                 let i = event.x
                 let j = event.y
                 image_id = d3.select(this).property("id")
@@ -479,7 +486,7 @@ d3.select("#img_5F").call(d3.drag()
 
 d3.select("#img_6").call(d3.drag()
     .on("start",function(event){
-                d3.select(this).style("border-width",2+"px")
+                d3.select(this).style("border-width",0+"px")
                 let i = event.x
                 let j = event.y
                 image_id = d3.select(this).property("id")
@@ -525,7 +532,7 @@ d3.select("#img_6").call(d3.drag()
 
 d3.select("#img_6F").call(d3.drag()
     .on("start",function(event){
-                d3.select(this).style("border-width",2+"px")
+                d3.select(this).style("border-width",0+"px")
                 let i = event.x
                 let j = event.y
                 image_id = d3.select(this).property("id")
@@ -571,7 +578,7 @@ d3.select("#img_6F").call(d3.drag()
 
 d3.select("#img_B1").call(d3.drag()
     .on("start",function(event){
-                d3.select(this).style("border-width",2+"px")
+                d3.select(this).style("border-width",0+"px")
                 let i = event.x
                 let j = event.y
                 image_id = d3.select(this).property("id")
@@ -617,7 +624,7 @@ d3.select("#img_B1").call(d3.drag()
 
 d3.select("#img_B2").call(d3.drag()
     .on("start",function(event){
-                d3.select(this).style("border-width",2+"px")
+                d3.select(this).style("border-width",0+"px")
                 let i = event.x
                 let j = event.y
                 image_id = d3.select(this).property("id")
@@ -663,7 +670,7 @@ d3.select("#img_B2").call(d3.drag()
 
 d3.select("#img_B3").call(d3.drag()
     .on("start",function(event){
-                d3.select(this).style("border-width",2+"px")
+                d3.select(this).style("border-width",0+"px")
                 let i = event.x
                 let j = event.y
                 image_id = d3.select(this).property("id")
@@ -958,14 +965,14 @@ d3.select("#img_B3").on("mouseout",function(){
 d3.select("#finish").on("click",function(){
     
     if (confirm("Are you sure you wish to record your response?")) {
-        html2canvas(document.getElementById("overflow")).then(function(canvas){
+        /*html2canvas(document.getElementById("screencapturediv")).then(function(canvas){
             let i = canvas.toDataURL("image/jpeg",0.9)
             let temp_data_log = {'screen-capture':i};
             $('body').trigger({ 'type': 'data_log_event', 'event_data': temp_data_log });
     
-        }) 
+        }) */
         window.open("3_Finish.html","_blank" );
-        img_ids = ['1','1F','2','2F','3','3F','4','4F','5','5F','6','6F','B1','B2','B3']
+        img_ids = ['1','2','2F','3','3F','4','5','5F','6','6F','B1','B2']
         for(i=0;i<15;i++){
             top_img = d3.select("#img_" + img_ids[i]).style("top")
             left_img = d3.select("#img_" + img_ids[i]).style("left")
